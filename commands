@@ -20,11 +20,6 @@ Stop-Process -processname notepad
 # Check if path/folder/file exists:
 Test-Path C:\Scripts\Archive
 
-# Write something to a file...
-echo test > C:/Temp/test.txt
-# And open that file, on the desktop remotely, to someone using Windows see what was writted!
-psexec \\HOSTNAME -u USER -p PASSWORD -d -i 1 notepad "C:/Temp/test.txt"
-
 # TaskScheduler for something and to run immediately:
 schtasks /create /SC ONCE /TN Name_Here /TR "C:/PATH/TO/APPLICATION.EXE" /ST 00:00
 schtasks /run /TN Name_Here
