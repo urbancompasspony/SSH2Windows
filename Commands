@@ -1,0 +1,21 @@
+# Command list to do over SSH on Linux!
+
+# Uptime:
+net statistics workstation
+
+# Service List that are Stopped:
+Get-Service | Where-Object {$_.status -eq "stopped"}
+
+# Service List that are Running
+Get-Service | Where-Object {$_.status -eq "running"}
+
+# Processes List:
+Get-Process
+# The same but colored!
+Get-Process | ForEach-Object {Write-Host $_.name -foregroundcolor cyan}
+
+# Stop process:
+Stop-Process -processname notepad
+
+# Check if path/folder/file exists:
+Test-Path C:\Scripts\Archive
