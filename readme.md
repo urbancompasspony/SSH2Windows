@@ -47,7 +47,10 @@ psexec \\HOSTNAME -u USER -p PASSWORD -d -i 1 APPLICATION.exe
 
 To run batch scripts remotely, and without showing the cmd window, do like these examples:
 
-psexec \\HOSTNAME -u USER -p PASSWORD -d -i 1 C:/PSExecScripts/quiet.exe C:/PSExecScripts/BATCH_FILE.bat
+psexec \\HOSTNAME -u USER -p PASSWORD -d -i 1 C:/PSExecScripts/Quiet.exe C:/PSExecScripts/BATCH_FILE.bat
 
 If you need to run an application like something.jar (java), use my example from this repository:
 https://github.com/urbancompasspony/SSH2Windows/blob/main/C:/PSExecScripts/Example.bat
+
+You can run these commands automatically from Linux with:
+ssh USER@IP_ADDRESS "psexec \\HOSTNAME -u USER -p PASSWORD -d -i 1 C:/PSExecScripts/Quiet.exe C:/PSExecScripts/BATCH_FILE.bat"
