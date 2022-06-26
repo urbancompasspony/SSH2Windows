@@ -14,3 +14,8 @@ https://github.com/urbancompasspony/SSH2Windows/blob/main/C:/PSExecScripts/Examp
 
 You can run these commands automatically from Linux with: 
 ssh USER@IP_ADDRESS "psexec \HOSTNAME -u USER -p PASSWORD -d -i 1 C:/PSExecScripts/Quiet.exe C:/PSExecScripts/BATCH_FILE.bat"
+
+# Write something to a file...
+echo test > C:/Temp/test.txt
+# ...and open that file, on the desktop remotely, to someone using Windows see what was writted!
+psexec \\HOSTNAME -u USER -p PASSWORD -d -i 1 notepad "C:/Temp/test.txt"
