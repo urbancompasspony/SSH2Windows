@@ -43,11 +43,11 @@ Download: https://www.joeware.net/freetools/tools/quiet/index.htm
 
 To run applications that needs UI/GUI remotely and starting them on the Windows system, do like these examples:
 
-psexec \\HOSTNAME -u USER -p PASSWORD -d -i 1 C:/PSExecScripts/quiet.exe application.exe
+psexec \\HOSTNAME -u USER -p PASSWORD -d -i 1 APPLICATION.exe
 
-To run batch scripts remotely, and without prompting the cmd window, do like these examples:
+To run batch scripts remotely, and without showing the cmd window, do like these examples:
 
-psexec \\HOSTNAME -u USER -p PASSWORD -d -i 1 C:/PSExecScripts/quiet.exe C:/PSExecScripts/batch_file.bat
+psexec \\HOSTNAME -u USER -p PASSWORD -d -i 1 C:/PSExecScripts/quiet.exe C:/PSExecScripts/BATCH_FILE.bat
 
-If you need to run an application like something.jar (java), use my example from "SSH2Windows/C:/PSExecScripts" folder on this repository!
+If you need to run an application like something.jar (java), use my example from this repository:
 https://github.com/urbancompasspony/SSH2Windows/blob/main/C:/PSExecScripts/Example.bat
