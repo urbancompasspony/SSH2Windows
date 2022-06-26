@@ -31,6 +31,23 @@ New-ItemProperty -Path "HKLM:\SOFTWARE\OpenSSH" -Name DefaultShell -Value "C:\Wi
 
 So PowerShell will become the main shell over SSH!
 
-4) Install PSTools.exe and add it to PATH.
+4) Download PSTools.exe and add it to PATH. Put where you want.
 
 Download: https://docs.microsoft.com/en-us/sysinternals/downloads/pstools
+
+5) Download a little application named QUIET. I put it on C:/PSExecScripts/
+
+Download: https://www.joeware.net/freetools/tools/quiet/index.htm
+
+# Remote
+
+To run applications that needs UI/GUI remotely and starting them on the Windows system, do like these examples:
+
+psexec \\HOSTNAME -u USER -p PASSWORD -d -i 1 C:/PSExecScripts/quiet.exe application.exe
+
+To run batch scripts remotely, and without prompting the cmd window, do like these examples:
+
+psexec \\HOSTNAME -u USER -p PASSWORD -d -i 1 C:/PSExecScripts/quiet.exe C:/PSExecScripts/batch_file.bat
+
+If you need to run an application like something.jar (java), use my example from "SSH2Windows/C:/PSExecScripts" folder on this repository!
+https://github.com/urbancompasspony/SSH2Windows/blob/main/C:/PSExecScripts/Example.bat
