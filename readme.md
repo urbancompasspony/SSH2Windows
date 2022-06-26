@@ -32,4 +32,5 @@ New-ItemProperty -Path "HKLM:\SOFTWARE\OpenSSH" -Name DefaultShell -Value "C:\Wi
 So PowerShell will become the main shell over SSH!
 
 4) Install PSTools.exe and add it to PATH.
+
 Download: https://docs.microsoft.com/en-us/sysinternals/downloads/pstools
