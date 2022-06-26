@@ -1,4 +1,4 @@
-# Windows
+# SSH2Windows
 
 Sequence of configurations and parameters to control, start and stop processes remotelly over SSH 
 on Windows 10, 11 or even Server, from Linux.
@@ -39,18 +39,5 @@ Download: https://docs.microsoft.com/en-us/sysinternals/downloads/pstools
 
 Download: https://www.joeware.net/freetools/tools/quiet/index.htm
 
-# Remote
-
-To run applications that needs UI/GUI remotely and starting them on the Windows system, do like these examples:
-
-psexec \\HOSTNAME -u USER -p PASSWORD -d -i 1 APPLICATION.exe
-
-To run batch scripts remotely, and without showing the cmd window, do like these examples:
-
-psexec \\HOSTNAME -u USER -p PASSWORD -d -i 1 C:/PSExecScripts/Quiet.exe C:/PSExecScripts/BATCH_FILE.bat
-
-If you need to run an application like something.jar (java), use my example from this repository:
-https://github.com/urbancompasspony/SSH2Windows/blob/main/C:/PSExecScripts/Example.bat
-
-You can run these commands automatically from Linux with:
-ssh USER@IP_ADDRESS "psexec \\HOSTNAME -u USER -p PASSWORD -d -i 1 C:/PSExecScripts/Quiet.exe C:/PSExecScripts/BATCH_FILE.bat"
+And thats it!
+Take a look at the files "commands" and "remote" of this repository.
