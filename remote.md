@@ -2,7 +2,7 @@
 
 If needed, put these parameters on commands, but normally they are not needed:
 
-\\HOSTNAME@DOMAIN -u USER -p PASSWORD 
+`\\HOSTNAME@DOMAIN -u USER -p PASSWORD`
 
 ## To run applications that needs UI/GUI remotely and starting them on the Windows system, 
 do like these examples:
