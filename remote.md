@@ -4,12 +4,12 @@ If needed, put these parameters on commands, but normally they are not needed:
 
 \\HOSTNAME@DOMAIN -u USER -p PASSWORD 
 
-# To run applications that needs UI/GUI remotely and starting them on the Windows system, 
+## To run applications that needs UI/GUI remotely and starting them on the Windows system, 
 do like these examples:
 
 psexec -d -i 1 APPLICATION.exe
 
-# To run batch scripts remotely, and without showing the cmd window, 
+## To run batch scripts remotely, and without showing the cmd window, 
 do like these examples:
 
 psexec -d -i 1 C:/PSExecScripts/Quiet.exe C:/PSExecScripts/BATCH_FILE.bat
@@ -20,9 +20,11 @@ https://github.com/urbancompasspony/SSH2Windows/blob/main/C:/PSExecScripts/Examp
 You can run these commands automatically from Linux with: 
 ssh USER@IP_ADDRESS "psexec -d -i 1 C:/PSExecScripts/Quiet.exe C:/PSExecScripts/BATCH_FILE.bat"
 
-# Write something to a file...
+Write something to a file...
+
 echo test > C:/Temp/test.txt
-# ...and open that file, on the desktop remotely, to someone using Windows see what was writted!
+
+...and open that file, on the desktop remotely, to someone using Windows see what was writted!
 psexec -d -i 1 notepad "C:/Temp/test.txt"
 
 Take a note about parameter "-i 1".
