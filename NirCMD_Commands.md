@@ -19,7 +19,7 @@ File:
 
 psexec -s -d -i 1 Quiet.exe OpenJ.bat
 
-Close the door of Y: CD-ROM drive	
+### Close the door of Y: CD-ROM drive	
 
 nircmd.exe cdrom close y:
 
@@ -27,7 +27,7 @@ File:
 
 psexec -s -d -i 1 Quiet.exe CloseJ.bat
 
-Increase the system volume by 2000 units (out of 65535):
+### Increase the system volume by 2000 units (out of 65535):
 
 nircmd.exe changesysvolume 2000
 
@@ -35,23 +35,23 @@ File:
 
 psexec -s -d -i 1 Quiet.exe vol2000.bat
 
-Decrease the system volume by 5000 units (out of 65535):
+### Decrease the system volume by 5000 units (out of 65535):
 
 nircmd.exe changesysvolume -5000
 
 File:
 
-psexec -d -i 1 change_5000.bat
+psexec -s -d -i 1 Quiet.exe vol5000.bat
 
-Set the volume to the highest value:
+### Set the volume to the highest value:
 
 nircmd.exe setsysvolume 65535
 
 File:
 
-psexec -s -d -i 1 Quiet.exe set_65535.bat
+psexec -s -d -i 1 Quiet.exe vol65535.bat
 
-Mute the system volume:
+### Mute the system volume:
 
 nircmd.exe mutesysvolume 1
 
@@ -59,122 +59,179 @@ File:
 
 psexec -s -d -i 1 Quiet.exe mute.bat
 
-Unmute the system volume:
+### Unmute the system volume:
 
 nircmd.exe mutesysvolume 0
 
-File:
+psexec -s -d -i 1 Quiet.exe Unmute.bat
 
-psexec -s -d -i 1 Quiet.exe unmute.bat
+### Turn off the monitor:
 
-Turn off the monitor:
+nircmd.exe monitor off
 
-psexec -d -i 1 nircmd.exe monitor off
+psexec -s -d -i 1 Quiet.exe monitoroff.bat
 
-Start the default screen saver:
+### Start the default screen saver:
 
-psexec -d -i 1 nircmd.exe screensaver
+nircmd.exe screensaver
 
-Put your computer in 'standby' mode:
+psexec -s -d -i 1 Quiet.exe screensaver.bat
 
-psexec -d -i 1 nircmd.exe standby
+### Put your computer in 'standby' mode:
 
-log off the current user:
+nircmd.exe standby
 
-psexec -d -i 1 nircmd.exe exitwin logoff
+psexec -s -d -i 1 Quiet.exe standby.bat
 
-Ask if you want to reboot, and if you answer 'Yes', reboot the computer:
+### log off the current user:
 
-psexec -d -i 1 nircmd.exe qboxcom "Do you want to reboot ?" "question" exitwin reboot
+nircmd.exe exitwin logoff
 
-Turn off your computer:
+psexec -s -d -i 1 Quiet.exe logoff.bat
 
-psexec -d -i 1 nircmd.exe exitwin poweroff
+### Ask if you want to reboot, and if you answer 'Yes', reboot the computer:
 
-Close all your Explorer windows (My Computer, folders, and so on):
+nircmd.exe qboxcom "Do you want to reboot ?" "question" exitwin reboot
 
-psexec -d -i 1 nircmd.exe win close class "CabinetWClass"
+psexec -s -d -i 1 Quiet.exe question.bat
 
-Set the Windows Calculator as top-most window (above all other windows):
+### Turn off your computer:
 
-psexec -d -i 1 nircmd.exe win settopmost title "Calculator" 1
+nircmd.exe exitwin poweroff
 
-Set the Windows Calculator back to regular window (non top-most window):
+psexec -s -d -i 1 Quiet.exe poweroff.bat
 
-psexec -d -i 1 nircmd.exe win settopmost title "Calculator" 0
+### Close all your Explorer windows (My Computer, folders, and so on):
 
-Create a shortcut to Windows calculator under Start Menu->Programs->Calculators:
+nircmd.exe win close class "CabinetWClass"
 
-psexec -d -i 1 nircmd.exe shortcut "f:\winnt\system32\calc.exe" "~$folder.programs$\Calculators" "Windows Calculator"
+psexec -s -d -i 1 Quiet.exe close_explorer.bat
 
-Hide the desktop window:
+### Set the Windows Calculator as top-most window (above all other windows):
 
-psexec -d -i 1 nircmd.exe win hide class progman
+nircmd.exe win settopmost title "Calculator" 1
 
-Show the desktop window (After hiding it in previous example):
+psexec -s -d -i 1 Quiet.exe calc1.bat
 
-psexec -d -i 1 nircmd.exe win show class progman
+### Set the Windows Calculator back to regular window (non top-most window):
 
-Kill (terminate) all instance of Internet Explorer processes:
+nircmd.exe win settopmost title "Calculator" 0
 
-psexec -d -i 1 nircmd.exe killprocess iexplore.exe
+psexec -s -d -i 1 Quiet.exe calc0.bat
 
-Create a shortcut on your desktop that opens the door of K: CDROM drive when you run it:
+### Create a shortcut to Windows calculator under Start Menu->Programs->Calculators:
 
-psexec -d -i 1 nircmd.exe cmdshortcut "~$folder.desktop$" "Open CDROM" cdrom open k:
+nircmd.exe shortcut "f:\winnt\system32\calc.exe" "~$folder.programs$\Calculators" "Windows Calculator"
 
-Create a shortcut to NirSoft Web site on your desktop:
+psexec -s -d -i 1 Quiet.exe calc.bat
 
-psexec -d -i 1 nircmd.exe urlshortcut "http://www.nirsoft.net" "~$folder.desktop$" "NirSoft"
+### Hide the desktop window:
 
-Set the display mode to 800x600x24bit colors:
+nircmd.exe win hide class progman
 
-psexec -d -i 1 nircmd.exe setdisplay 800 600 24
+psexec -s -d -i 1 Quiet.exe deskhide.bat
 
-Copy all shortcuts on your desktop to another folder (f:\temp\desktop):
+### Show the desktop window (After hiding it in previous example):
 
-psexec -d -i 1 nircmd.exe execmd copy "~$folder.desktop$\*.lnk" f:\temp\desktop
+nircmd.exe win show class progman
 
-Restart your IIS:
+psexec -s -d -i 1 Quiet.exe deskshow.bat
 
-psexec -d -i 1 nircmd.exe service restart w3svc
+### Kill (terminate) all instance of Internet Explorer processes:
 
-Restart MySql:
+nircmd.exe killprocess iexplore.exe
 
-psexec -d -i 1 nircmd.exe service restart MySql
+psexec -s -d -i 1 Quiet.exe kill_ie.bat
 
-Open the desired Registry key/value in RegEdit:
+### Create a shortcut on your desktop that opens the door of K: CDROM drive when you run it:
 
-psexec -d -i 1 nircmd.exe regedit "HKLM\Software\Microsoft\Windows\CurrentVersion" "CommonFilesDir"
+nircmd.exe cmdshortcut "~$folder.desktop$" "Open CDROM" cdrom open k:
 
-Open the Registry key that you copied to the clipboard in RegEdit:
+psexec -s -d -i 1 Quiet.exe shrtCD.bat
 
-psexec -d -i 1 nircmd regedit "~$clipboard$"
+### Create a shortcut to NirSoft Web site on your desktop:
 
-Disable the screen saver:
+nircmd.exe urlshortcut "http://www.nirsoft.net" "~$folder.desktop$" "NirSoft"
 
-psexec -d -i 1 nircmd.exe regsetval sz "HKCU\control panel\desktop" "ScreenSaveActive" 0
+psexec -s -d -i 1 Quiet.exe shrtURL.bat
 
-Enable the screen saver:
+### Set the display mode to 800x600x24bit colors:
 
-psexec -d -i 1 nircmd.exe regsetval sz "HKCU\control panel\desktop" "ScreenSaveActive" 1
+nircmd.exe setdisplay 800 600 24
 
-Empty the recycle bin in all drives:
+psexec -s -d -i 1 Quiet.exe disp.bat
 
-psexec -d -i 1 nircmd.exe emptybin
+### Copy all shortcuts on your desktop to another folder (f:\temp\desktop):
 
-Answer 'Yes' to a standard Windows message-box:
+nircmd.exe execmd copy "~$folder.desktop$\*.lnk" f:\temp\desktop
 
-psexec -d -i 1 nircmd.exe dlg "" "" click yes
+psexec -s -d -i 1 Quiet.exe copy_shrt.bat
 
-Wait 2 seconds, and then save the current screen to shot.png (Take carefull about privacy!)
+### Restart your IIS (Windows Server):
 
-psexec -d -i 1 nircmd.exe cmdwait 2000 savescreenshot "f:\temp\shot.png"
+nircmd.exe service restart w3svc
 
-Save 10 screenshots in a loop, and wait 60 seconds between the screenshot save calls. The filenames of the screenshot will contain the time and date of the saved screenshot.	
+psexec -s -d -i 1 Quiet.exe IIS.bat
 
-psexec -d -i 1 nircmd.exe loop 10 60000 savescreenshot c:\temp\scr~$currdate.MM_dd_yyyy$-~$currtime.HH_mm_ss$.png
+### Restart MySql:
 
-Wait until Firefox is closed, and then say "Firefox was closed"	
+nircmd.exe service restart MySql
 
-psexec -d -i 1 nircmd.exe waitprocess firefox.exe speak text "Firefox was closed"
+psexec -s -d -i 1 Quiet.exe mysql.bat
+
+### Open the desired Registry key/value in RegEdit:
+
+nircmd.exe regedit "HKLM\Software\Microsoft\Windows\CurrentVersion" "CommonFilesDir"
+
+psexec -s -d -i 1 Quiet.exe openregedit.bat
+
+#### Open the Registry key that you copied to the clipboard in RegEdit:
+
+nircmd regedit "~$clipboard$"
+
+psexec -s -d -i 1 Quiet.exe clipregedit.bat
+
+### Disable the screen saver:
+
+nircmd.exe regsetval sz "HKCU\control panel\desktop" "ScreenSaveActive" 0
+
+psexec -s -d -i 1 Quiet.exe screensaver0.bat
+
+### Enable the screen saver:
+
+nircmd.exe regsetval sz "HKCU\control panel\desktop" "ScreenSaveActive" 1
+
+psexec -s -d -i 1 Quiet.exe screensaver1.bat
+
+### Empty the recycle bin in all drives:
+
+nircmd.exe emptybin
+
+psexec -s -d -i 1 Quiet.exe bin.bat
+
+### Answer 'Yes' to a standard Windows message-box:
+
+nircmd.exe dlg "" "" click yes
+
+psexec -s -d -i 1 Quiet.exe yes.bat
+
+### Wait 2 seconds, and then save the current screen to shot.png (Take carefull about privacy!)
+
+nircmd.exe cmdwait 2000 savescreenshot "f:\temp\shot.png"
+
+psexec -s -d -i 1 Quiet.exe srnsht.bat
+
+### Save 10 screenshots in a loop, and wait 60 seconds between the screenshot save calls. The filenames of the screenshot will contain the time and date of the saved screenshot.	
+
+nircmd.exe loop 10 60000 savescreenshot c:\temp\scr~$currdate.MM_dd_yyyy$-~$currtime.HH_mm_ss$.png
+
+psexec -s -d -i 1 Quiet.exe sequential_scrnsht.bat
+
+### Wait until Firefox is closed, and then say "Firefox was closed"	
+
+nircmd.exe waitprocess firefox.exe speak text "Firefox was closed"
+
+psexec -s -d -i 1 Quiet.exe fire.bat
+
+## I don't tested all codes above!
+Some maybe not work.
