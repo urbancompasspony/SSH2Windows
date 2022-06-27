@@ -43,6 +43,10 @@ If error with permissions, use this command first to elevate your PowerShell env
 
 net use \\MACHINE-NAME\ipc$ /user:USER_ADMINISTRATOR PASSWORD
 
+And add this reg:
+
+reg add HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\system /v LocalAccountTokenFilterPolicy /t REG_DWORD /d 1 /f
+
 5) Download a little application named QUIET. I put it on C:/PSExecScripts/
 
 Download: https://www.joeware.net/freetools/tools/quiet/index.htm
