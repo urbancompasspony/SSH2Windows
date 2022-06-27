@@ -22,6 +22,8 @@ do like these examples:
 
 $ psexec -s -d -i 1 C:/PSExecScripts/Quiet.exe C:/PSExecScripts/BATCH_FILE.bat
 
+## Java Apps
+
 If you need to run an application like something.jar (java), create a .bat file with this inside:
 
 @echo off
@@ -33,6 +35,12 @@ java -jar "path/to/.jar" parameters_here
 You can run these commands automatically from Linux with:
 
 ssh USER@IP_ADDRESS "psexec -s -d -i 1 Quiet.exe C:/path/to/BATCH_FILE.bat"
+
+### The more you know...
+
+If you have some knowledge, you can create the .bat file when connecting SSH:
+
+
 
 ## Show custom text through notepad
 
