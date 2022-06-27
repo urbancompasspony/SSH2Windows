@@ -1,5 +1,13 @@
 # F.A.Q.
 
+## How it works?
+
+Basicaly you will use just PSExec from PSTools.
+
+Then, if you want to add some resources to PSExec, use NirCMD but with PSExec or will not work through SSH.
+
+Finally, if you want to run .bat scripts and not show the black window, just use the Quiet.exe script!
+
 ## What can I do with these scripts and line codes?
 
 Write some automatic codes to run from SSH and/or CRON jobs from Linux systems to administrate automatic jobs for Windows systems.
