@@ -38,9 +38,7 @@ ssh USER@IP_ADDRESS "psexec -s -d -i 1 Quiet.exe C:/path/to/BATCH_FILE.bat"
 
 ### The more you know...
 
-If you have some knowledge, you can create the .bat file when connecting SSH:
-
-
+If you have some knowledge, you can create the .bat file when connecting SSH with some shell scripting!
 
 ## Show custom text through notepad
 
