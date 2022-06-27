@@ -46,4 +46,4 @@ psexec -s -d -i 1 notepad "C:/Temp/test.txt"
 
 # Everything Ok??
 
-Go see files "PowerShell_Commands" and/or "NirCMD_Commands.md"!
+Go see files "PowerShell_Commands", "SH_Commands" and/or "NirCMD_Commands.md"!
