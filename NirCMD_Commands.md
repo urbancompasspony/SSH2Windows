@@ -15,15 +15,11 @@ If you put everything under a folder and this folder is on PATH, you will just n
 
 nircmd.exe cdrom open j:
 
-File:
-
 psexec -s -d -i 1 Quiet.exe OpenJ.bat
 
 ### Close the door of Y: CD-ROM drive	
 
 nircmd.exe cdrom close y:
-
-File:
 
 psexec -s -d -i 1 Quiet.exe CloseJ.bat
 
@@ -31,15 +27,11 @@ psexec -s -d -i 1 Quiet.exe CloseJ.bat
 
 nircmd.exe changesysvolume 2000
 
-File:
-
 psexec -s -d -i 1 Quiet.exe vol2000.bat
 
 ### Decrease the system volume by 5000 units (out of 65535):
 
 nircmd.exe changesysvolume -5000
-
-File:
 
 psexec -s -d -i 1 Quiet.exe vol5000.bat
 
@@ -47,15 +39,11 @@ psexec -s -d -i 1 Quiet.exe vol5000.bat
 
 nircmd.exe setsysvolume 65535
 
-File:
-
 psexec -s -d -i 1 Quiet.exe vol65535.bat
 
 ### Mute the system volume:
 
 nircmd.exe mutesysvolume 1
-
-File:
 
 psexec -s -d -i 1 Quiet.exe mute.bat
 
