@@ -1,4 +1,7 @@
-# Command list to do over SSH on Linux!
+# Main commands that can be made inside PowerShell
+
+# The same ones like Linux to manipulate folders:
+cp, rm, mkdir, ls, mv, etc...
 
 # Uptime:
 net statistics workstation
