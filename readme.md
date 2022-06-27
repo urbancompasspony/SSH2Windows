@@ -64,4 +64,6 @@ Also, you need to enable Network Discovery, with:
 
 netsh advfirewall firewall set rule group="Network Discovery" new enable=Yes
 
+If it not work, use GUI inside Explorer.exe to enable! Just allow like Private Networks config.
+
 Reboot your machine and everything will works!
