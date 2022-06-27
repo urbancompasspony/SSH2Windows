@@ -1,4 +1,23 @@
-## My PSExec is giving error of Permission Denied!
+# F.A.Q.
+
+## What can I do with these scripts and line codes?
+
+Write some automatic codes to run from SSH and/or CRON jobs from Linux systems to administrate automatic jobs for Windows systems.
+You can do this for Windows 10, 11 or Server 2019 and 2022.
+
+Almost every script that opens up a GUI will open on Windows System, not Linux! This is not like Xorg over SSH, you will not grab the Window openned.
+
+Is something more to run applications that need graphical interface remotelly without Anydesk, TeamViewer or etc.
+
+## Examples of something?
+
+You can simple run a service or even start some application and keep it openned; For Windows Server it is comfy to work on.
+
+Or when on Windows 10 you can troll someone, spy someone since SSH plus PSTools and NirCMD are invisible to normal use (but they are running in processes list, remember that). You can adjust audio, take screenshots, etc.
+
+With controll of Windows through SSH, your imagination is what will limit you.
+
+## My PSExec is giving errors of Permission Denied!
 
 Do some things:
 
