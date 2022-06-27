@@ -9,8 +9,8 @@ net statistics workstation
 # Service List that are Stopped:
 Get-Service | Where-Object {$_.status -eq "stopped"}
 
-# Service List that are Running
-Get-Service | Where-Object {$_.status -eq "running"}
+# Service List but from name:
+Get-Service | Where-Object {$_.name -eq "XboxNetApiSvc"}
 
 # Processes List:
 Get-Process
