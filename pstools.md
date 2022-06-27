@@ -1,4 +1,4 @@
-# Remote
+# PSTOols
 
 ## Commands to use psexec from pstools!
 
