@@ -1,4 +1,4 @@
-# PSTOols
+# PSTools
 
 ## Commands to use psexec from pstools!
 
