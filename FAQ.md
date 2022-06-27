@@ -8,6 +8,12 @@ Then, if you want to add some resources to PSExec, use NirCMD but with PSExec or
 
 Finally, if you want to run .bat scripts and not show the black window, just use the Quiet.exe script!
 
+## I mean... how it really Works?
+
+Everything running through SSH only, and co-related openned ports to this works like that.
+
+Nothing more, a tool for sysadmins control and manager Windows remotely.
+
 ## What can I do with these scripts and line codes?
 
 Write some automatic codes to run from SSH and/or CRON jobs from Linux systems to administrate automatic jobs for Windows systems.
