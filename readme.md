@@ -109,4 +109,4 @@ UPDATE: Changed all scripts to has this parameter as default.
 
 # Everything ok?
 
-Go to "Main_PSExec_Commands.md" file!
+Go to file "Main_PSExec_Commands.md"!
