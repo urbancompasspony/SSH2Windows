@@ -39,14 +39,6 @@ When first run, accept EULA:
 
 psexec /accepteula
 
-If error with permissions, use this command first to elevate your PowerShell environment:
-
-net use \\MACHINE-NAME\ipc$ /user:USER_ADMINISTRATOR PASSWORD
-
-And add this reg:
-
-reg add HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\system /v LocalAccountTokenFilterPolicy /t REG_DWORD /d 1 /f
-
 5) Download a little application named QUIET. I put it on C:/PSExecScripts/
 
 Download: https://www.joeware.net/freetools/tools/quiet/index.htm
@@ -57,3 +49,19 @@ Download: https://www.nirsoft.net/utils/nircmd.html
 
 And thats it!
 Take a look at the files "commands" and "remote" of this repository.
+
+# Permissions & Errors
+
+If error with permissions, use this command first to temporary elevate your PowerShell environment:
+
+net use \\MACHINE-NAME\ipc$ /user:USER_ADMINISTRATOR PASSWORD
+
+To make it permanently, run this as administrator account:
+
+reg add HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\system /v LocalAccountTokenFilterPolicy /t REG_DWORD /d 1 /f
+
+Also, you need to enable Network Discovery, with:
+
+netsh advfirewall firewall set rule group="Network Discovery" new enable=Yes
+
+Reboot your machine and everything will works!
