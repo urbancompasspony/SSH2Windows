@@ -31,7 +31,9 @@ New-ItemProperty -Path "HKLM:\SOFTWARE\OpenSSH" -Name DefaultShell -Value "C:\Wi
 
 So PowerShell will become the main shell over SSH!
 
-4) Download PSTools.exe and add it to PATH. Put where you want.
+## Some aditional tools, the first one is the most important:
+
+1) Download PSTools.exe and add it to PATH. Put where you want.
 
 Download: https://docs.microsoft.com/en-us/sysinternals/downloads/pstools
 
@@ -39,11 +41,11 @@ When first run, accept EULA:
 
 psexec /accepteula
 
-5) Download a little application named QUIET. I put it on C:/PSExecScripts/
+2) Download a little application named QUIET. I put it on C:/PSExecScripts/
 
 Download: https://www.joeware.net/freetools/tools/quiet/index.htm
 
-6) Another nice optional tool is NirCMD, alternative to PSTools:
+3) Another nice optional tool is NirCMD, alternative to PSTools:
 
 Download: https://www.nirsoft.net/utils/nircmd.html
 
