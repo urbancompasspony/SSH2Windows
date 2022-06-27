@@ -3,7 +3,7 @@
 Sequence of configurations and parameters to control, start and stop processes remotelly over SSH 
 on Windows 10, 11 or even Server, from Linux.
 
-## Dependencies
+## Installation and Configuration
 
 1) Install and configure OpenSSH Server on your Linux.
 2) Install and configure OpenSSH Server on Windows.
@@ -48,6 +48,5 @@ Download: https://www.joeware.net/freetools/tools/quiet/index.htm
 Download: https://www.nirsoft.net/utils/nircmd.html
 
 And thats it!
-Take a look at the files "commands" and "remote" of this repository.
 
-
+If you are encountering problems, take a look at FAQ.md file.
