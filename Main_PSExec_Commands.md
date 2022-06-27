@@ -43,3 +43,7 @@ echo test > C:/Temp/test.txt
 ...and open that file, on the desktop remotely, to someone using Windows see what was writted!
 
 psexec -s -d -i 1 notepad "C:/Temp/test.txt"
+
+# Everything Ok??
+
+Go see files "PowerShell_Commands" and/or "NirCMD_Commands.md"!
