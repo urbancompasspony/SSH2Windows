@@ -1,5 +1,7 @@
 # Remote
 
+## Commands to use psexec from pstools!
+
 If needed, put these parameters on commands, but normally they are not needed:
 
 `\\HOSTNAME@DOMAIN -u USER -p PASSWORD`
