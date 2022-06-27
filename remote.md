@@ -4,12 +4,12 @@ If needed, put these parameters on commands, but normally they are not needed:
 
 `\\HOSTNAME@DOMAIN -u USER -p PASSWORD`
 
-## To run applications that needs UI/GUI remotely and starting them on the Windows system, 
+To run applications that needs UI/GUI remotely and starting them on the Windows system, 
 do like these examples:
 
 psexec -d -i 1 APPLICATION.exe
 
-## To run batch scripts remotely, and without showing the cmd window, 
+To run batch scripts remotely, and without showing the cmd window, 
 do like these examples:
 
 psexec -d -i 1 C:/PSExecScripts/Quiet.exe C:/PSExecScripts/BATCH_FILE.bat
