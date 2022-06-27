@@ -106,3 +106,7 @@ psexec -s -d -i 1 "application.exe"
 -s will run as System User, don't know why this solves the problem.
 
 UPDATE: Changed all scripts to has this parameter as default.
+
+# Everything ok?
+
+Go to "Main_PSExec_Commands.md" file!
