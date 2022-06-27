@@ -39,5 +39,9 @@ Download: https://docs.microsoft.com/en-us/sysinternals/downloads/pstools
 
 Download: https://www.joeware.net/freetools/tools/quiet/index.htm
 
+6) Another nice optional tool is NirCMD, alternative to PSTools:
+
+Download: https://www.nirsoft.net/utils/nircmd.html
+
 And thats it!
 Take a look at the files "commands" and "remote" of this repository.
