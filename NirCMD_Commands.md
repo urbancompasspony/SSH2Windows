@@ -1,41 +1,71 @@
 # NirCMD
 
-# WIP
-# DO NOT USE, for now.
+Auxiliary commands to complement PSExec adding more cool stuff to do!
 
-## Commands to use with NirCMD; PSTools required!
+You need to put the script line inside some .bat file to run it with PSExec through NirCMD.
 
-You need to put the script inside some .bat file to run.
+On examples bellow, there is the example what you can do; then what the line you will put inside some_batch.bat;
+And finally, the command you will use through SSH to run that command!
+
+If you put everything under a folder and this folder is on PATH, you will just need to call the application.exe instead of using full path.
 
 ## Examples:
 
-Open the door of J: CD-ROM drive:
+### Open the door of J: CD-ROM drive:
 
-psexec -d -i 1 nircmd.exe cdrom open j:
+nircmd.exe cdrom open j:
+
+File:
+
+psexec -s -d -i 1 Quiet.exe OpenJ.bat
 
 Close the door of Y: CD-ROM drive	
 
-psexec -d -i 1 nircmd.exe cdrom close y:
+nircmd.exe cdrom close y:
+
+File:
+
+psexec -s -d -i 1 Quiet.exe CloseJ.bat
 
 Increase the system volume by 2000 units (out of 65535):
 
-psexec -d -i 1 nircmd.exe changesysvolume 2000
+nircmd.exe changesysvolume 2000
+
+File:
+
+psexec -s -d -i 1 Quiet.exe vol2000.bat
 
 Decrease the system volume by 5000 units (out of 65535):
 
-psexec -d -i 1 nircmd.exe changesysvolume -5000
+nircmd.exe changesysvolume -5000
+
+File:
+
+psexec -d -i 1 change_5000.bat
 
 Set the volume to the highest value:
 
-psexec -d -i 1 nircmd.exe setsysvolume 65535
+nircmd.exe setsysvolume 65535
+
+File:
+
+psexec -s -d -i 1 Quiet.exe set_65535.bat
 
 Mute the system volume:
 
-psexec -d -i 1 nircmd.exe mutesysvolume 1
+nircmd.exe mutesysvolume 1
+
+File:
+
+psexec -s -d -i 1 Quiet.exe mute.bat
 
 Unmute the system volume:
 
-psexec -d -i 1 nircmd.exe mutesysvolume 0
+nircmd.exe mutesysvolume 0
+
+File:
+
+psexec -s -d -i 1 Quiet.exe unmute.bat
 
 Turn off the monitor:
 
