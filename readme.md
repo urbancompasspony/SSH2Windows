@@ -35,6 +35,14 @@ So PowerShell will become the main shell over SSH!
 
 Download: https://docs.microsoft.com/en-us/sysinternals/downloads/pstools
 
+When first run, accept EULA:
+
+psexec /accepteula
+
+If error with permissions, use this command first to elevate your PowerShell environment:
+
+net use \\MACHINE-NAME\ipc$ /user:USER_ADMINISTRATOR PASSWORD
+
 5) Download a little application named QUIET. I put it on C:/PSExecScripts/
 
 Download: https://www.joeware.net/freetools/tools/quiet/index.htm
