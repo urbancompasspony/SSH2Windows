@@ -1,6 +1,11 @@
 # NirCMD
 
+# WIP
+# DO NOT USE, for now.
+
 ## Commands to use with NirCMD; PSTools required!
+
+You need to put the script inside some .bat file to run.
 
 ## Examples:
 
@@ -31,10 +36,6 @@ psexec -d -i 1 nircmd.exe mutesysvolume 1
 Unmute the system volume:
 
 psexec -d -i 1 nircmd.exe mutesysvolume 0
-
-Create a shortcut on your desktop that switch the system volume between the mute and normal state:
-
-psexec -d -i 1 nircmd.exe cmdshortcut "~$folder.desktop$" "Switch Volume" mutesysvolume 2
 
 Turn off the monitor:
 
