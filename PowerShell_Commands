@@ -28,6 +28,14 @@ schtasks /create /SC ONCE /TN Name_Here /TR "C:/PATH/TO/APPLICATION.EXE" /ST 00:
 schtasks /run /TN Name_Here
 TO DELETE: schtasks /delete /TN Name_Here /F
 
+# Show all drives and more!
+psdrive
+# Or just see free space in one drive (for example, C):
+(gdr c).Free/1gb
+
+# Get scheduled task list that are running:
+(get-scheduledtask).where({$_.state -eq 'running'})
+
 # Dump WiFi Passwords:
 netsh wlan show profiles
 # Or something more complex:
@@ -38,3 +46,13 @@ Get-NetIPAddress -AddressFamily IPv4 | where-object IPAddress -notmatch "^(169)|
 
 # Uptime
 (get-date) – (gcim Win32_OperatingSystem).LastBootUpTime
+
+# for finding all drives that are mapped to drive letters
+ls function:[a-z]: -n|?{(test-path $_)}
+
+# to find available drive letters to map to
+ls function:[a-z]: -n|?{!(test-path $_)}
+
+# Show the last 10 erros from System Event:
+get-winevent -FilterHashtable @{Logname = 'System';Level=2} -MaxEvents 10 | sort-Object ProviderName,TimeCreated
+
