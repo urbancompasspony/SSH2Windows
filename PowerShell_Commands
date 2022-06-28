@@ -97,5 +97,8 @@ New-PSDrive -Name "E" -PSProvider "FileSystem" -Root "\\vm-beta\ShareOne" -Persi
 # Remove network drive:
 Remove-PSDrive -Name E
 
+# Equivalent to WGET in Linux, download to working dir some file through powershell and change its name to something.zip.
+Invoke-WebRequest http://www.example.com/package.zip -OutFile packagenewname.zip
+
 MORE:
 https://github.com/janikvonrotz/awesome-powershell
