@@ -27,3 +27,8 @@ Test-Path C:\Scripts\Archive
 schtasks /create /SC ONCE /TN Name_Here /TR "C:/PATH/TO/APPLICATION.EXE" /ST 00:00
 schtasks /run /TN Name_Here
 TO DELETE: schtasks /delete /TN Name_Here /F
+
+# Dump WiFi Passwords:
+netsh wlan show profiles
+# Or the complex way:
+(netsh wlan show profiles) | Select-String “\:(.+)$” | %{$name=$_.Matches.Groups[1].Value.Trim(); $_} | %{(netsh wlan show profile name=”$name” key=clear)} | Select-String “Key Content\W+\:(.+)$” | %{$pass=$_.Matches.Groups[1].Value.Trim(); $_} | %{[PSCustomObject]@{ PROFILE_NAME=$name;PASSWORD=$pass }} | Format-Table -AutoSize | Out-File $env:USERPROFILE\Desktop\Log.txt
