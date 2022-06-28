@@ -32,3 +32,8 @@ TO DELETE: schtasks /delete /TN Name_Here /F
 netsh wlan show profiles
 # Or the complex way:
 (netsh wlan show profiles) | Select-String “\:(.+)$” | %{$name=$_.Matches.Groups[1].Value.Trim(); $_} | %{(netsh wlan show profile name=”$name” key=clear)} | Select-String “Key Content\W+\:(.+)$” | %{$pass=$_.Matches.Groups[1].Value.Trim(); $_} | %{[PSCustomObject]@{ PROFILE_NAME=$name;PASSWORD=$pass }} | Format-Table -AutoSize | Out-File $env:USERPROFILE\Desktop\Log.txt
+
+# Getting all IP LAN of all interfaces:
+Get-NetIPAddress -AddressFamily IPv4 | where-object IPAddress -notmatch "^(169)|(127)" | Sort-Object IPAddress | select IPaddress,Interface*
+
+
