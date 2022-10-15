@@ -100,5 +100,9 @@ Remove-PSDrive -Name E
 # Equivalent to WGET in Linux, download to working dir some file through powershell and change its name to something.zip.
 Invoke-WebRequest http://www.example.com/package.zip -OutFile packagenewname.zip
 
+# Turn OFF remotely:
+net use \\STATION\ipc$ /user:USER
+shutdown -s /C /Y /T:30 "msg" \\STATION
+
 MORE:
 https://github.com/janikvonrotz/awesome-powershell
